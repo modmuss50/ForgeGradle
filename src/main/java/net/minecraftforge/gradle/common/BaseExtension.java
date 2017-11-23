@@ -255,15 +255,15 @@ public abstract class BaseExtension
     protected void checkMappings()
     {
 
-        if (!Strings.isNullOrEmpty(version)
-                && (compareVersion(version, MIN_VERSION) < 0 || compareVersion(version, MAX_VERSION) > 0)
-                && !suppressVersionTest)
-        {
-                // version not supported
-                throw new GradleConfigurationException(String.format("ForgeGradle %s does not support Minecraft %s. MIN: %s, MAX: %s",
-                        forgeGradleVersion, version, MIN_VERSION, nullStringTo(MAX_VERSION, "none")));
-
-        }
+//        if (!Strings.isNullOrEmpty(version)
+//                && (compareVersion(version, MIN_VERSION) < 0 || compareVersion(version, MAX_VERSION) > 0)
+//                && !suppressVersionTest)
+//        {
+//                // version not supported
+//                throw new GradleConfigurationException(String.format("ForgeGradle %s does not support Minecraft %s. MIN: %s, MAX: %s",
+//                        forgeGradleVersion, version, MIN_VERSION, nullStringTo(MAX_VERSION, "none")));
+//
+//        }
 
         // mappings or mc version are null
         if (mappingsChannel == null || Strings.isNullOrEmpty(version))
